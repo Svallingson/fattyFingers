@@ -51,14 +51,19 @@ table {
 /* --- RESET END --- */
 
 html, body {
-  min-height: 100%;
-  background-color: #FFD400;
+  height: 100%;
+  background: linear-gradient(135deg, #FFD400, #ffbb00);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper {
   display: flex;
-  flex-direction: column;
+
 }
 
 .header {
@@ -73,9 +78,66 @@ h1 {
   font-size: 5rem;
   /* Google Font "Fredoka One" */
   font-family: 'Fredoka One';
+  text-shadow:
+    -1px -1px 2px #ccc,
+    4px 4px 5px #ffbb00;
+   /* 0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);*/
 }
 
-.main{
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 10rem;
+  z-index: 1;
+}
+
+#leftbtn1 {
+  width: 2px;
+  height: 18px;
+  background: linear-gradient(135deg, rgb(255, 255, 255), rgb(150, 150, 150));
+  border-radius: 3px;
+  border-left: .2px solid #eee;
+  border-top: .5px solid #eee;
+  box-shadow:
+    inset 0px 9px 2px rgba(255, 255, 255, .5),
+    inset -.5px -7px 3px rgba(80, 80, 80 , .7),
+    -3px -5px 15px rgba(255, 255, 255, .8),
+    inset 2px 2px 3px rgba(255, 255, 255, .8),
+    -5px 5px 10px rgb(253, 144, 1);
+}
+
+#leftbtn2 {
+  margin-top: 2rem;
+  margin-right: -2px;
+  width: 2px;
+  height: 18px;
+  background: linear-gradient(135deg, rgb(255, 255, 255), rgb(150, 150, 150));
+  border-radius: 3px;
+  border-left: .2px solid #eee;
+  border-top: .2px solid #eee;
+  box-shadow:
+    inset 0px 9px 2px rgba(255, 255, 255, .5),
+    inset -.5px -7px 3px rgba(80, 80, 80 , .7),
+    -3px -5px 15px rgba(255, 255, 255, .8),
+    inset 2px 2px 3px rgba(255, 255, 255, .8),
+    -5px 5px 10px rgb(253, 144, 1);
+}
+
+.center {
+  display: flex;
+  width: 290px;
+  z-index: 2;
+}
+
+.main {
+  margin-top: 4rem;
   flex: 1 0 auto;
   flex-grow: 1;
 }
@@ -91,12 +153,23 @@ h1 {
   width: 290px;
   height: 590px;
   border-radius: 50px;
-  background-color: #222222;
+  background-color: #000000;
+  background:
+    linear-gradient(135deg, rgba(170,170,170,1), rgba(140,140,140,1) 15%, rgba(30,30,30,1) 45%, rgba(0,0,0,1) 45%);
+    /*linear-gradient(360deg, rgba(0,0,0,1), rgba(255,0,0,1));*/
   margin-top: 4rem;
   margin-bottom: 8rem;
   justify-content: center;
   align-items: flex-end;
-  box-shadow: 4px 4px 5px #bb9900;
+  box-shadow:
+    3px 8px 10px rgb(122, 70, 1),
+    15px 20px 15px rgba(224, 128, 1, 0.6),
+    inset 3px 3px 2px #eee,
+    inset -6px -6px 3px #000,
+    -.8px -2px 25px rgba(255, 255, 255, .3),  
+    -.8px -2px 10px rgba(255, 255, 255, .5);  
+  position: absolute;
+  z-index: 1;
 }
 
 .homebtn {
@@ -104,13 +177,76 @@ h1 {
   width: 50px;
   height: 50px;
   border-radius: 200px;
-  background-color: #222222;
+  background-color: #000000;
   margin-bottom: 15px;
+  margin-left: -10px;
   border: 2px solid #444444;
   border-top-color: #343434;
   border-bottom-color: #565656;
   transform: rotate(-35deg);
+  box-shadow: inset -1px -2px 1px #eee, inset -.5px -3px 8px rgba(255, 255, 255, .2);
+  z-index: 4;
+  cursor: pointer;
 }
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 500px;
+  margin-bottom: 8rem;
+  border-radius: 50px;
+  background: linear-gradient(360deg, rgba(0,0,0,1), rgba(0,0,0,.5) 50%, rgba(0,0,0,0) 75%);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.speaker {
+  width: 50px;
+  height: 7px;
+  background-color: #222222;
+  border-radius: 10px;
+  z-index: 10;
+  position: relative;
+  margin: auto;
+  top: 20px;
+  box-shadow:
+  inset -.7px -.7px 0.9px #ccc,
+  inset -.7px -.7px 6px rgba(255, 255, 255, .2);
+}
+
+/* -- Canvas-- */
+#screen {
+  display: flex;
+  width: 280px;
+  height: 500px;
+  background-color: transparent;
+  /*background-color: rgba(0, 0, 255, 0.2);*/
+  border-radius: 50px;
+  z-index: 3;
+  margin-bottom: 0rem;
+  cursor: pointer;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rem;
+  z-index: 6;
+}
+
+#rightbtn {
+  display: flex;
+  width: 2px;
+  height: 25px;
+  background-color: rgba(10, 10, 10, 1);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow:
+    3px 8px 10px rgb(122, 70, 1),
+    15px 20px 15px rgba(224, 128, 1, 0.6);
+  }
 
 .footer {
   flex-shrink: 0;
