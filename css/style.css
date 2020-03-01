@@ -100,49 +100,16 @@ h1 {
   z-index: 1;
 }
 
-#leftbtn1 {
+#leftbtn1, #leftbtn2 {
   width: 2px;
   height: 18px;
-  /*background: linear-gradient(135deg, rgb(255, 255, 255), rgb(150, 150, 150));
-  border-radius: 3px;
-  border-left: .2px solid #eee;
-  border-top: .5px solid #eee;
-  box-shadow:
-    inset 0px 9px 2px rgba(255, 255, 255, .5),
-    inset -.5px -7px 3px rgba(80, 80, 80 , .7),
-    -3px -5px 15px rgba(255, 255, 255, .8),
-    inset 2px 2px 3px rgba(255, 255, 255, .8),
-    -5px 5px 10px rgb(253, 144, 1)*/;
 }
 
 #leftbtn2 {
   margin-top: 2rem;
   margin-right: -2px;
-  width: 2px;
-  height: 18px;
-  /*background: linear-gradient(135deg, rgb(255, 255, 255), rgb(150, 150, 150));
-  border-radius: 3px;
-  border-left: .2px solid #eee;
-  border-top: .2px solid #eee;
-  box-shadow:
-    inset 0px 9px 2px rgba(255, 255, 255, .5),
-    inset -.5px -7px 3px rgba(80, 80, 80 , .7),
-    -3px -5px 15px rgba(255, 255, 255, .8),
-    inset 2px 2px 3px rgba(255, 255, 255, .8),
-    -5px 5px 10px rgb(253, 144, 1)*/;
-}
-
-.leftbtn {
-  background: linear-gradient(135deg, rgb(255, 255, 255), rgb(150, 150, 150));
-  border-radius: 3px;
-  border-left: .2px solid #eee;
-  border-top: .2px solid #eee;
-  box-shadow:
-    inset 0px 9px 2px rgba(255, 255, 255, .5),
-    inset -.5px -7px 3px rgba(80, 80, 80 , .7),
-    -3px -5px 15px rgba(255, 255, 255, .8),
-    inset 2px 2px 3px rgba(255, 255, 255, .8),
-    -5px 5px 10px rgb(253, 144, 1);
+  /*width: 2px;
+  height: 18px;*/
 }
 
 .centerfield {
@@ -170,9 +137,7 @@ h1 {
   height: 590px;
   border-radius: 50px;
   background-color: #000000;
-  background:
-    linear-gradient(135deg, rgba(170,170,170,1), rgba(140,140,140,1) 15%, rgba(30,30,30,1) 45%, rgba(0,0,0,1) 45%);
-    /*linear-gradient(360deg, rgba(0,0,0,1), rgba(255,0,0,1));*/
+  background:linear-gradient(135deg, rgba(170,170,170,1), rgba(140,140,140,1) 15%, rgba(30,30,30,1) 45%, rgba(0,0,0,1) 45%);
   margin-top: 4rem;
   margin-bottom: 8rem;
   justify-content: center;
@@ -182,10 +147,22 @@ h1 {
     15px 20px 15px rgba(224, 128, 1, 0.6),
     inset 3px 3px 2px #eee,
     inset -6px -6px 3px #000,
-    -.8px -2px 25px rgba(255, 255, 255, .3),  
-    -.8px -1px 10px rgba(255, 255, 255, .4);  
+    -.8px -1px 10px rgba(255, 255, 255, .4),
+    -.8px -2px 25px rgba(255, 255, 255, .3);  
   position: absolute;
   z-index: 1;
+}
+
+.leftbtn {
+  background: linear-gradient(135deg, rgb(255, 255, 255), rgb(150, 150, 150));
+  border-radius: 3px;
+  border-left: .2px solid #eee;
+  border-top: .2px solid #eee;
+  box-shadow:
+    inset 0px 9px 2px rgba(255, 255, 255, .5),
+    inset -.5px -7px 3px rgba(80, 80, 80 , .7),
+    -3px -5px 15px rgba(255, 255, 255, .8),
+    inset 2px 2px 3px rgba(255, 255, 255, .8);
 }
 
 .homebtn {
@@ -195,12 +172,13 @@ h1 {
   border-radius: 200px;
   background-color: #000000;
   margin-bottom: 15px;
-  margin-left: -10px;
   border: 2px solid #444444;
   border-top-color: #343434;
   border-bottom-color: #565656;
   transform: rotate(-35deg);
-  box-shadow: inset -1px -2px 1px #eee, inset -.5px -3px 8px rgba(255, 255, 255, .2);
+  box-shadow:
+    inset -1px -2px 1px #eee,
+    inset -.5px -3px 8px rgba(255, 255, 255, .2);
   z-index: 4;
   cursor: pointer;
 }
@@ -268,6 +246,10 @@ h1 {
 .footer {
   flex-shrink: 0;
   color: rgba(122, 70, 1, 0.6);
+  padding: 2rem 0 4rem 0;
   text-align: center;
   font-size: small;
+  text-shadow: 
+    -.4px -.4px 6px rgba(255, 222, 55, .5),
+    /*.01px .01px .1px rgba(112, 64, 2, .3);*/
 }
